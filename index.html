@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-center md:h-screen md:bg-no-repeat bg-[url('images/sea1.jpg')]">
+
+    <!-- div principal -->
+<div class="principal">
+
+
+    <div class="grid grid-cols-2 gap-4 pt-4 pb-10">
+        
+        <div class="flex justify-end h-8">
+
+            <img src="images/do.svg" alt="" srcset="">
+
+            <!-- @foreach (Config::get('languages') as $lang => $language)
+                @if (app()->getLocale() === $language['flag'])
+                    <img src="{{ asset('images/' . $language['image']) }}" alt="" class="mr-4">
+                @endif
+            @endforeach -->
+
+        </div>
+        <div class="flex justify-start">
+
+<form class="max-w-sm my-auto">
+    <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 md:w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <option selected>seleccione su idioma</option>
+      <option value="US">United States</option>
+      <option value="CA">Canada</option>
+      <option value="FR">France</option>
+      <option value="DE">Germany</option>
+    </select>
+  </form>
+  
+            <!-- <form class="flex justify-end items-center" action="{{ route('lang.switch') }}" method="POST">
+                @csrf
+                <select onchange="this.form.submit()" name="language" id="language"
+                    class="form-select rounded-lg px-3 h-8 border-amber-400 md:hidden w-full changeLang">
+                    <option value="es" selected>Seleccione su idioma</option>
+                    @foreach (Config::get('languages') as $lang => $language)
+                        <option value="{{ $language['flag'] }}"
+                            {{ app()->getLocale() === $language['flag'] ? 'selected' : '' }}
+                            data-img="{{ asset('images/' . $language['image']) }}">
+                            {{ $language['display'] }}</option>
+                    @endforeach
+                </select>
+            </form> -->
+        </div>
+    </div>
+
+
+
+    <!-- div para la imagen de fondo -->
+
+    <div class="grid grid-cols-1 mt-10 md:mt-0">
+
+        <div class="flex justify-center">
+            <img class="h-48 w-48 mt-08 mb-10" src="/images/capitania de puerto1.png"
+            alt="" srcset="">
+        </div>
+
+
+        <div class="flex justify-center text-white">
+            <h1 class="text-xl font-black -mt-6 mb-4 text-center">ARMADA DE REPÚBLICA
+                DOMINICANA <br><span class="text-xl font-semibold">DESPACHO RD</span></h1>
+        </div>
+    </div>
+
+
+    <div>
+        <div id="animation-carousel" class="relative mt-12 md:mt-2 md:mt-0 w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative text-white h-56 overflow-hidden md:h-60">
+                <!--max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48-->
+
+                <!-- slide con texto -->
+                <!-- <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <p>hola mundo soy yo de nuevo</p>
+                <img src="{{ asset('images/boat.png') }}"
+                    class="absolute block max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+                <p class="text-center text-xl pb-10 -mt-1 font-bold">Despacho</p>
+            </div> -->
+
+
+
+
+                <!-- Item 1 -->
+
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/images/boat.png"
+                        class="absolute block max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                    <p class="text-center text-2xl pb-10 -mt-1 font-bold">Despacho</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/images/cruise.png"
+                        class="absolute block max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                    <p class="text-center text-2xl pb-10 -mt-1 font-bold">Conduce</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/images/smartphone.png"
+                        class="absolute block max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                    <p class="text-center text-2xl pb-10 -mt-1 font-bold">Asistencia</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="/images/darse-cuenta.png"
+                        class="absolute block max-w-[150px] lg:max-w-[250px] object-contain h-48 w-48 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="...">
+                    <p class="text-center text-2xl pb-10 -mt-1 font-bold">Aviso para navegantes</p>
+                </div>
+            </div>
+            <!-- comentare los controles del slider por que no quiero borrarlos en caso de necesaitarlo -->
+
+            <!-- Slider controls -->
+            <!-- <button type="button" class="absolute bg-blue-900 top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+ <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+</svg>
+<span class="sr-only">Previous</span>
+</span>
+</button>
+<button type="button" class="absolute bg-blue-900 top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+ <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+</svg>
+<span class="sr-only">Next</span>
+</span>
+</button> -->
+        </div>
+
+    </div>
+    <!-- aqui es dodne termian el carrousel -->
+
+    <div class="flex justify-center mt-16 md:mt-2 pb-8">
+
+        <a href="{{ route('login') }}"
+            class="px-8 py-4 text-lg text-white bg-blue-500 font-bold rounded-full transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg hover:bg-blue-600">
+            Iniciar Sesión
+        </a>
+
+    </div>
+
+</div>    
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</body>
+</html>
